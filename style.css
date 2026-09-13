@@ -235,6 +235,7 @@ button,
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
+    appearance: button;
 }
 
 /**
@@ -327,6 +328,7 @@ textarea {
 
 [type="search"] {
 	-webkit-appearance: textfield; /* 1 */
+    appearance: textfield; /* 1 */
 	outline-offset: -2px; /* 2 */
 }
 
@@ -999,7 +1001,9 @@ a{
 
 .hero-cont img{
     width: auto !important;
+    min-width: 100vw;
     max-width: none;
+    min-height: 100vh;
     left: 50%;
     transform: translateX(-50%);
     position: relative;
@@ -1035,6 +1039,8 @@ a{
     border: 2px solid #fff;
     border-radius: 10px; 
 }
+
+/* also cta styles in woocommerce section */
 
 .btn.cta:hover{
     background: rgba(246,36,89,1);
@@ -1234,11 +1240,6 @@ footer .section-content.centered{
     z-index: -1; 
 }
 
-.hero-cont img{
-    min-height: 100vh;
-    min-width: 100vw;
-}
-
 #content,
 #primary,
 #main,
@@ -1262,7 +1263,9 @@ footer .section-content.centered{
 }
 
 .home .section-content.centered h2, 
-.woocommerce-page:not(.woocommerce-order-received) .section-content.centered h2{
+#start .section-content.centered h2, 
+.woocommerce-page:not(.woocommerce-order-received) .section-content.centered h2,
+.archive .section-content.centered h2{
     font-family: "ShimesOne", Arial, sans-serif;
     font-size: 15rem;
     text-align: center;
@@ -1355,15 +1358,6 @@ footer .section-content.centered{
     display: block;
 }
 
-/*
-.band-img.wp-post-image{
-
-    width: 48%;
-    float: left;
-    margin-right: 4%;
-}
-*/
-
 .band-bio,
 .band-members,
 .band-text figure.wp-block-embed-facebook,
@@ -1439,16 +1433,6 @@ footer .section-content.centered{
     font-weight: 300;
     margin-top: 0;
 }
-
-/* 4 Columns Layout 
-#videos-wrap{
-    display: grid;
-    -webkit-column-count: 4; 
-    -moz-column-count: 4;
-    column-count: 4;
-    column-gap: 2%;
-}
-*/
 
 /* 2 Columns Layout*/
 #videos-wrap{
@@ -1677,20 +1661,6 @@ label{
     right: -1rem;
 }
 
-	/*
-.category-pressekit .section-content > .wp-block-group{
-    width: calc(50% - 1rem);
-    display: inline-block;
-    padding-right: 1rem;
-	vertical-align: top;
-	margin-bottom: 0;
-}
-
-.category-pressekit figure.is-type-video {
-		width: 100%;
-}
-*/
-
 .category-pressekit .wp-block-group{
 	margin-bottom: 0 !important;
 }
@@ -1718,13 +1688,7 @@ label{
 	    position: fixed;
 		background: rgba(16,25,22,0.8);
 		z-index: 99999999;
-	}	
-	
-    /*
-	.dark-bg{
-	background: rgba(16,25,22,0.8);
 	}
-    */
 		
 	.logotop{
 		width: 100%;
@@ -1948,15 +1912,6 @@ label{
     #site-navigation .section-content.centered{
         width: 100%;
     }
-    
-    /*
-    #videos figure{
-        float: left;
-        margin-right: 1%;
-        width: 75vw;
-        height: auto;
-    }
-    */
 	
 	.category-pressekit .section-content > .wp-block-group{
 		width: 100%;
@@ -2008,10 +1963,6 @@ label{
     #contact div.wpcf7-mail-sent-ok, #contact div.wpcf7-response-output {
         margin-top: 30%;
     }
-    
-    /*#videos-wrap {
-        padding-bottom: 4rem;
-    }*/
     
     .date{
         font-size: 100%;
@@ -2094,16 +2045,6 @@ label{
         padding-bottom: 15%;
     }
 	
-	/*
-	.category-pressekit p{
-		font-size: 160% !important;
-	}
-	
-	.category-pressekit	a.btn.cta{
-		font-size: 160% !important;
-	}
-	*/
-	
 	.category-pressekit figure{
 		width: 100% !important;
 		margin-left: 0;
@@ -2120,14 +2061,6 @@ label{
 		margin-right: auto;
 		display: block;
 	}
-	
-	/*
-	.single-post p,
-	.single-post footer a,
-	.single-post footer a:visited{
-		font-size: 160% !important;
-	}
-	*/
 	
 	.single-post p a{
 		font-size: 100% !important;
@@ -2338,17 +2271,6 @@ label{
 }
 
 @media screen and (min-width: 1600px){
-    /* 4 Col Layout
-    #videos-wrap{
-        display: grid;
-        -webkit-column-count: 4;
-        -moz-column-count: 4; 
-        column-count: 4;
-        column-gap: 2%;
-        grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
-        grid-auto-flow: row; 
-    }
-    */
     #videos-wrap{
         display: grid;
         -webkit-column-count: 2;
@@ -2531,16 +2453,6 @@ label{
         font-size: 1.6rem;
     }
 }
-
-/*
-@media screen and (min-width: 360px) and (max-width: 767px){
-    .logotop.home h1.site-title.site-title-home,
-    .single-post .logotop.nohome h1{
-        font-size: 350% !important;
-        line-height: 0.8;
-    }
-}
-*/
 
 @media screen and (min-width: 1280px){
     #contact input[type="text"],
