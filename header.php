@@ -17,20 +17,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
     <link href="wp-content/themes/julianablumenschein/fonts/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
-    <!--<script src="https://kit.fontawesome.com/da5273f50f.js" crossorigin="anonymous" async></script>-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
     <!--<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!--<link rel="stylesheet" href="/wp-content/themes/julianablumenschein/swiper/package/css/swiper.min.css">-->
-    <script src="/wp-content/themes/julianablumenschein/js/products-slider.js"></script>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?> id="start">
-  <!--  <?php
-
-phpinfo();
-?> -->
+<?php // phpinfo(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'julianablumenschein' ); ?></a>
         <?php
