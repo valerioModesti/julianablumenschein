@@ -3093,24 +3093,26 @@ body.page-id-928 input::placeholder{
     color: #a8414d !important;
 }
 body.page-id-928 input[type="text"],
-body.page-id-928 input[type="email"]{
+body.page-id-928 input[type="email"],
+body.page-id-928 textarea{
     background-color: #a8414dAA !important;
     color: #fef9f3 !important;
 }
 
 body.page-id-928 a.btn.cta,
 body.page-id-928 button,
+body.page-id-928 .woocommerce button,
 body.page-id-928 input{
-    border-color: #a8414d;
-    border-radius: 0;
+    border-color: #a8414d !important;
+    border-radius: 0 !important;
 }
 
 body.page-id-928 a.btn.cta:hover,
 body.page-id-928 button:hover,
 body.page-id-928 input:hover{
     color: #fef9f3 !important;
-    background: #a8414d;
-    border-color: #a8414d;
+    background: #a8414d !important;
+    border-color: #a8414d !important;
 }
 
 body.page-id-928 input::placeholder,
@@ -3134,13 +3136,15 @@ body.page-id-928 .entry-content > div:nth-of-type(even) input::placeholder{
 
 body.page-id-928 .entry-content > div:nth-of-type(even) a.btn.cta,
 body.page-id-928 .entry-content > div:nth-of-type(even) button,
+body.page-id-928 .entry-content > div:nth-of-type(even) .woocommerce button,
 body.page-id-928 .entry-content > div:nth-of-type(even) input,
 body.page-id-928 .entry-content > div:nth-of-type(even) input::placeholder{
-    border-color: #fef9f3;
+    border-color: #fef9f3 !important;
 }
 
 body.page-id-928 .entry-content > div:nth-of-type(even) a.btn.cta:hover,
 body.page-id-928 .entry-content > div:nth-of-type(even) button:hover,
+body.page-id-928 .entry-content > div:nth-of-type(even) .woocommerce button:hover,
 body.page-id-928 .entry-content > div:nth-of-type(even) input:hover{
     color: #a8414d !important;
     background: #fef9f3;
@@ -3149,4 +3153,34 @@ body.page-id-928 .entry-content > div:nth-of-type(even) input:hover{
 
 body.page-id-928 textarea{
     border-radius: 0;
+}
+
+body.page-id-928 .smush-detected-img{
+    border-radius: 0 !important;
+}
+
+body.page-id-928 .band-thumbnail:hover, 
+body.page-id-928 .band-thumbnail-wrap img,
+body.page-id-928 .band-img.wp-post-image{
+    filter: sepia(.4);
+}
+
+
+@media screen and (min-width: 1280px) {
+    #band-thumbnails{
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .band-thumbnail-wrap {
+        position: relative;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        flex: 0 0 25%;
+        width: auto;
+        overflow: hidden;
+    }
 }

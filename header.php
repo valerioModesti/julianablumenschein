@@ -28,7 +28,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'julianablumenschein' ); ?></a>
         <?php
-        if ( is_front_page() || is_page( 'start-neu' ) ) :
+        if ( is_front_page() || is_page( 'start-neu-928' ) ) :
         echo "<header id='masthead' class='site-header home'>";
         else:
         echo "<header id='masthead' class='site-header nohome'>";
@@ -37,7 +37,7 @@
 		<div class="site-branding">
             <div class="mobile-top-bg"></div>
             <?php
-            if ( is_front_page() || is_page( 'start-neu' ) ) :
+            if ( is_front_page() || is_page( 'start-neu-928' ) ) :
             ?>
                 <div class="hero-cont">
                 	<?php julianablumenschein_post_thumbnail('full',array('class' => 'start-hero')); ?>
@@ -64,7 +64,7 @@
             ?>
 		</div><!-- .site-branding -->
         <?php
-        if ( is_front_page() || is_page( 'start-neu' ) ) : //( ... || is_home() )
+        if ( is_front_page() || is_page( 'start-neu-928' ) ) : //( ... || is_home() )
         ?>
 		<nav id="site-navigation" class="main-navigation">
             <div class="section-content centered">
