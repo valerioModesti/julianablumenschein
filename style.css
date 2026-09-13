@@ -3029,9 +3029,124 @@ input#coupon_code{
 }
 /* Debugging */
 
+.archive:before{
+	background-image: url(https://julianablumenschein.de/wp-content/uploads/2026/07/juliana_presse_1536.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+	width: 100%;
+	height: 100%;
+	content:'';
+}
 
-#shop,
-.menu-woocommerce-container,
-#menu-item-435{
-	/* display: none; */
+
+/* styles start-neu */
+body.page-id-928,
+body.page-id-928 .section-content.centered p,
+body.page-id-928 a,
+body.page-id-928 input,
+body.page-id-928 textarea,
+body.page-id-928 button{
+    font-family: "Ubuntu Mono", monospace !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.page-id-928 .section-content.centered h2 {
+    font-family: "Cormorant Garamond", serif !important;
+    text-transform: uppercase;
+    font-size: 10rem !important;
+    font-weight: 400;
+}
+
+body.page-id-928 .title-cont {
+    display: none;
+}
+
+body.page-id-928 .entry-content > div:nth-of-type(odd), 
+body.page-id-928 .woocommerce-page #content, 
+body.page-id-928 .archive #content,
+body.page-id-928 .logotop {
+    background: #fef9f3AA;
+}
+
+body.page-id-928 .entry-content > div:nth-of-type(even){
+    background: #a8414dAA;
+}
+
+body.page-id-928 h1,
+body.page-id-928 h2,
+body.page-id-928 h3,
+body.page-id-928 h4,
+body.page-id-928 li,
+body.page-id-928 p,
+body.page-id-928 a,
+body.page-id-928 a.btn.cta,
+body.page-id-928 button,
+body.page-id-928 label,
+body.page-id-928 textarea,
+body.page-id-928 input,
+body.page-id-928 input[type="text"],
+body.page-id-928 input[type="email"],
+body.page-id-928 input[type="submit"],
+body.page-id-928 input::placeholder{
+    color: #a8414d !important;
+}
+body.page-id-928 input[type="text"],
+body.page-id-928 input[type="email"]{
+    background-color: #a8414dAA !important;
+    color: #fef9f3 !important;
+}
+
+body.page-id-928 a.btn.cta,
+body.page-id-928 button,
+body.page-id-928 input{
+    border-color: #a8414d;
+    border-radius: 0;
+}
+
+body.page-id-928 a.btn.cta:hover,
+body.page-id-928 button:hover,
+body.page-id-928 input:hover{
+    color: #fef9f3 !important;
+    background: #a8414d;
+    border-color: #a8414d;
+}
+
+body.page-id-928 input::placeholder,
+body.page-id-928 .entry-content > div:nth-of-type(even) h2,
+body.page-id-928 .entry-content > div:nth-of-type(even) h3,
+body.page-id-928 .entry-content > div:nth-of-type(even) h4,
+body.page-id-928 .entry-content > div:nth-of-type(even) li,
+body.page-id-928 .entry-content > div:nth-of-type(even) p,
+body.page-id-928 .entry-content > div:nth-of-type(even) a,
+body.page-id-928 .entry-content > div:nth-of-type(even) a.btn.cta,
+body.page-id-928 .entry-content > div:nth-of-type(even) button,
+body.page-id-928 .entry-content > div:nth-of-type(even) label,
+body.page-id-928 .entry-content > div:nth-of-type(even) textarea,
+body.page-id-928 .entry-content > div:nth-of-type(even) input,
+body.page-id-928 .entry-content > div:nth-of-type(even) input,[type="text"],
+body.page-id-928 .entry-content > div:nth-of-type(even) input[type="email"],
+body.page-id-928 .entry-content > div:nth-of-type(even) input[type="submit"],
+body.page-id-928 .entry-content > div:nth-of-type(even) input::placeholder{
+    color: #fef9f3 !important;
+}
+
+body.page-id-928 .entry-content > div:nth-of-type(even) a.btn.cta,
+body.page-id-928 .entry-content > div:nth-of-type(even) button,
+body.page-id-928 .entry-content > div:nth-of-type(even) input,
+body.page-id-928 .entry-content > div:nth-of-type(even) input::placeholder{
+    border-color: #fef9f3;
+}
+
+body.page-id-928 .entry-content > div:nth-of-type(even) a.btn.cta:hover,
+body.page-id-928 .entry-content > div:nth-of-type(even) button:hover,
+body.page-id-928 .entry-content > div:nth-of-type(even) input:hover{
+    color: #a8414d !important;
+    background: #fef9f3;
+    border-color: #fef9f3;
+}
+
+body.page-id-928 textarea{
+    border-radius: 0;
 }
