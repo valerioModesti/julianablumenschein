@@ -6,7 +6,7 @@
             'post_status' => 'publish',
             'posts_per_page'=>-1,
             'orderby' => 'menu_order',
-            'order' => 'DESC'
+            'order' => 'ASC'
         ));
 
     if ($query->have_posts()) { 
