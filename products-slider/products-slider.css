@@ -51,3 +51,13 @@ button.slider-button-prev {
     width: 80%;
     margin: 0 auto;
 }
+
+@media screen and (max-width: 767px){
+    .woocommerce div.product {
+        width: 60%;
+    }
+    
+    .slider-navigation {
+        margin-top: 90%;
+    }
+}

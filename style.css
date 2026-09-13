@@ -1864,10 +1864,6 @@ label{
         font-size: 1.6rem !important;
     }
 
-    .single-product {
-        width: 60%;
-    }
-
     h1.site-title.site-title-home{
         font-size: 8rem;
         line-height: 1;
@@ -2512,7 +2508,7 @@ label{
         text-align: center;
         display: table-cell;
         vertical-align: middle;
-        font-size: 200%;
+        font-size: 150%;
     }    
     
     .band-img.wp-post-image{
