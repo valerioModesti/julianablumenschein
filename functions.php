@@ -137,6 +137,37 @@ function julianablumenschein_scripts() {
 add_action( 'wp_enqueue_scripts', 'julianablumenschein_scripts' );
 
 /**
+ * Load the product slider in the document head when there are multiple products.
+ */
+function julianablumenschein_product_slider_script() {
+  $product_query = new WP_Query( array(
+    'post_type'      => 'product',
+    'posts_per_page' => 2,
+    'no_found_rows'  => false,
+  ) );
+
+  if ( $product_query->found_posts > 1 ) {
+    wp_enqueue_style(
+      'julianablumenschein-products-slider',
+      get_template_directory_uri() . '/products-slider/products-slider.css',
+      array(),
+      '1.0.0'
+    );
+
+    wp_enqueue_script(
+      'julianablumenschein-products-slider',
+      get_template_directory_uri() . '/products-slider/products-slider.js',
+      array(),
+      '1.0.0',
+      false
+    );
+  }
+
+  wp_reset_postdata();
+}
+add_action( 'wp_enqueue_scripts', 'julianablumenschein_product_slider_script' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

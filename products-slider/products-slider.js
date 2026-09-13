@@ -3,18 +3,20 @@ const productsSlider = (() => {
     let singleProducts = [];
     let nextButton;
     let prevButton;
+    let dots;
     let dot;
     let currentIndex = 0;
     
     function init(){
         if (singleProducts.length <= 1) { return; }
-        createStylesheet();
         createNavigation();
         createPagination();
         startSlider();
     }
 
     function startSlider(){
+        let touchStartX = 0;
+
         singleProducts.forEach((product, index) => {
             product.style.display = index === currentIndex ? 'block' : 'none';
         });
@@ -26,77 +28,73 @@ const productsSlider = (() => {
             currentIndex = (currentIndex - 1 + singleProducts.length) % singleProducts.length;
             updateSlider();
         });
+        target.addEventListener('touchstart', (event) => {
+            touchStartX = event.changedTouches[0].screenX;
+        }, { passive: true });
+        target.addEventListener('touchend', (event) => {
+            const touchEndX = event.changedTouches[0].screenX;
+            const swipeDistance = touchEndX - touchStartX;
+
+            if (Math.abs(swipeDistance) < 50) {
+                return;
+            }
+
+            currentIndex = swipeDistance < 0
+                ? (currentIndex + 1) % singleProducts.length
+                : (currentIndex - 1 + singleProducts.length) % singleProducts.length;
+            updateSlider();
+        }, { passive: true });
+        dots.forEach((e) => { 
+            e.addEventListener('click', (event) => {
+                const clickedDotIndex = Array.from(dot.parentNode.children).indexOf(event.target);
+                if (clickedDotIndex !== -1) {
+                    currentIndex = clickedDotIndex;
+                    updateSlider();
+                }
+            })
+        });
     }
 
     function updateSlider(){
         singleProducts.forEach((product, index) => {
             product.style.display = index === currentIndex ? 'block' : 'none';
         });
-        const dots = document.querySelectorAll('.swiper-pagination-dot');
+        window.dispatchEvent(new Event('resize'));
+        const dots = document.querySelectorAll('.slider-pagination-dot');
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
         });
     }
 
-    function createStylesheet(){
-        const style = document.createElement('style');
-        style.innerHTML = `
-            .swiper-navigation {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 10px;
-            }
-            .swiper-button-next, .swiper-button-prev {
-                background-color: #000AA;
-                color: #fff;
-                border: none;
-                padding: 10px 20px;
-                cursor: pointer;
-            }
-            .swiper-pagination {
-                display: flex;
-                justify-content: center;
-                margin-top: 10px;
-            }
-            .swiper-pagination-dot {
-                width: 10px;
-                height: 10px;
-                background-color: #000;
-                border-radius: 50%;
-                margin: 0 5px;
-                cursor: pointer;
-            }
-            .swiper-pagination-dot.active {
-                background-color: #fff;
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
     function createNavigation(){
         const navivgation = document.createElement('div');
-        navivgation.className = 'swiper-navigation';
+        navivgation.className = 'slider-navigation';
         nextButton = document.createElement('button');
-        nextButton.className = 'swiper-button-next';
+        nextButton.className = 'slider-button-next';
+        nextButton.textContent = '→';
+        nextButton.setAttribute('aria-label', 'Next product');
         prevButton = document.createElement('button');
-        prevButton.className = 'swiper-button-prev';
-        navivgation.appendChild(nextButton);
+        prevButton.className = 'slider-button-prev';
+        prevButton.textContent = '←';
+        prevButton.setAttribute('aria-label', 'Previous product');
         navivgation.appendChild(prevButton);
+        navivgation.appendChild(nextButton);
         target.appendChild(navivgation);
     }
     
     function createPagination(){
         const pagination = document.createElement('div');
-        pagination.className = 'swiper-pagination';
+        pagination.className = 'slider-pagination';
         singleProducts.forEach((product, index) => {
             dot = document.createElement('span');
-            dot.className = 'swiper-pagination-dot';
+            dot.className = 'slider-pagination-dot';
             if(index === 0){
                 dot.classList.add('active');
             }
             pagination.appendChild(dot);
         });
         target.appendChild(pagination);
+        dots = document.querySelectorAll('.slider-pagination-dot');
     }
 
     return{
@@ -107,10 +105,3 @@ const productsSlider = (() => {
         }
     }
 })();
-
-/*
-productsSlider.setup({
-    target: document.querySelector('.woocommerce'),
-    singleProducts: document.querySelectorAll('.single-product'),
-});
-*/
