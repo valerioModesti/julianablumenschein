@@ -1241,7 +1241,7 @@ footer .section-content.centered{
     margin-left: auto;
     margin-right: auto;
     color: #fff;
-    padding-bottom: 10%;
+    padding-bottom: 8rem;
     max-width: 1600px !important;
     position: relative;
 }
@@ -3012,7 +3012,7 @@ body.page-id-928 button{
     font-style: normal;
 }
 
-body.page-id-928 .section-content.centered h2 {
+body.page-id-928 .section-content.centered h2{
     font-family: "Cormorant Garamond", serif !important;
     text-transform: uppercase;
     font-size: 10rem !important;
@@ -3026,12 +3026,13 @@ body.page-id-928 .title-cont {
 body.page-id-928 .entry-content > div:nth-of-type(odd), 
 body.page-id-928 .woocommerce-page #content, 
 body.page-id-928 .archive #content,
-body.page-id-928 .logotop {
-    background: #fef9f3AA;
+body.page-id-928 .header-wrapper,
+body.page-id-928 footer{
+    background: #fef9f3EE;
 }
 
 body.page-id-928 .entry-content > div:nth-of-type(even){
-    background: #a8414dAA;
+    background: #a8414dEE;
 }
 
 body.page-id-928 h1,
