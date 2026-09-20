@@ -1298,10 +1298,6 @@ footer .section-content.centered{
 	/*text-align: justify;*/
 }
 
-.section-content.centered > div:not(.date){
-    margin-bottom: 7%;    
-}
-
 #news-container{
 	margin-bottom: 12%;
 }
@@ -1899,12 +1895,6 @@ label{
         padding-bottom: 0rem;
     }
     
-    #videos > div,
-    #news > div,
-    #contact > div{
-        padding-bottom: 8.5rem;
-    }
-    
     #dates > div,
     #bands > div{
         padding-bottom: 5rem;
@@ -1937,14 +1927,6 @@ label{
         display: block;
         column-count: initial;
         column-gap: initial;
-    }
-    
-    .cta-wrap{
-        margin-bottom: 5%;
-    }
-    
-    .section-content.centered{
-        padding-bottom: 6rem;
     }
     
     #bands-container{
@@ -2403,10 +2385,6 @@ label{
 	.news-text-container h4 strong{
 	    font-size: 2rem;
     	font-weight: 300;
-	}
-	
-	.news-text-container .cta-wrap{
-		margin-top: 4rem;
 	}
     
     .band-img.wp-post-image {
