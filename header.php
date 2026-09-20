@@ -16,6 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="icon" type="image/svg+xml" href="<?php echo esc_url( get_template_directory_uri() . '/img/juliana_blumenschein_logo_compact.svg' ); ?>">
     <link href="wp-content/themes/julianablumenschein/fonts/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
