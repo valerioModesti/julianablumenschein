@@ -46,7 +46,7 @@
                 <?php
                 endif;
                 ?>
-                <p>© 2019 Juliana Blumenschein</p>
+                <p>&copy; <?php echo esc_html( wp_date( 'Y' ) ); ?> Juliana Blumenschein</p>
                 </div>
             </div>
             <div class="footer-col right">
