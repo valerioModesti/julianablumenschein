@@ -28,86 +28,98 @@
 <?php // phpinfo(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'julianablumenschein' ); ?></a>
-        <?php
-        if ( is_front_page() || is_page( 'start-neu-928' ) ) :
-        echo "<header id='masthead' class='site-header home'>";
-        else:
-        echo "<header id='masthead' class='site-header nohome'>";
-        endif;
-        ?>
-		<div class="site-branding">
-            <div class="mobile-top-bg"></div>
-            <?php
-            if ( is_front_page() || is_page( 'start-neu-928' ) ) :
-            ?>
-                <div class="hero-cont">
-                	<?php julianablumenschein_post_thumbnail('full',array('class' => 'start-hero')); ?>
-                </div>
-                <div class="title-cont">
-				    <h1 class="site-title site-title-home"><?php bloginfo( 'name' ); ?></h1>
-                </div>
-                <div class="logotop home">
-				    <a href="#start" rel="home"><h1 class="site-title site-title-home"><?php bloginfo( 'name' ); ?></h1></a>
-                </div>
-                <?php
-			else :
-				?>
-                <div class="hero-cont">
-                	<?php julianablumenschein_post_thumbnail('full',array('class' => 'start-hero')); ?>
-                </div>
-                <div class="logotop nohome">
-				    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h1 class="site-title site-title-nohome"><?php bloginfo( 'name' ); ?></h1></a>
-                </div>
+    <?php
+    // Determine site name, location, and logo content based on the current page
+    $site_name = get_bloginfo( 'name', 'display' );
+    $location = ( is_front_page() || is_page( 'start-neu-928' ) ) ? 'home' : 'nohome';
+    if ( is_page( 'start-neu-928' ) ) {
+        $logo_url = esc_url( get_template_directory_uri() . '/img/juliana_blumenschein_logo_red.svg' );
+        $logotop_content = "<img class='logo' src='" . $logo_url . "' alt='" . esc_attr( $site_name . ' logo' ) . "'>";
+    } else {
+        $logotop_content = "<h1 class='site-title site-title-home'>" . esc_html( $site_name ) . "</h1>";
+    }
 
-            <?php //julianablumenschein_post_thumbnail('full',array('class' => 'start-hero')); ?>
-				<?php
-			endif;
-            ?>
-		</div><!-- .site-branding -->
-        <?php
-        if ( is_front_page() || is_page( 'start-neu-928' ) ) : //( ... || is_home() )
-        ?>
-		<nav id="site-navigation" class="main-navigation">
-            <div class="section-content centered">
-                <div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                    <div id="hamburger">
-                        <div class="hamburger-line"></div>
-                        <div class="hamburger-line"></div>
-                        <div class="hamburger-line"></div>
-                    </div>
+    ob_start(); // Start output buffering for navigation menu
+    ?>
+    <nav id="site-navigation" class="main-navigation">
+        <div class="section-content centered">
+            <div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <div id="hamburger">
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
                 </div>
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'menu-1',
-                    'menu_id'        => 'primary-menu',
-                ) );
-                ?>
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'menu-2',
-                    'menu_id'        => 'social-menu',
-                ) );
-                ?>
             </div>
-        </nav><!-- #site-navigation -->
-        <?php
-            else:
-        ?>    
-	
-        <nav id="site-navigation" class="main-navigation">
-            <div class="section-content centered">    
             <?php
-		
+            wp_nav_menu( array(
+                'theme_location' => 'menu-1',
+                'menu_id'        => 'primary-menu',
+            ) );
             wp_nav_menu( array(
                 'theme_location' => 'menu-2',
                 'menu_id'        => 'social-menu',
             ) );
-			
+            ?>
+        </div>
+    </nav><!-- #site-navigation -->
+    <?php
+    $navigation = ob_get_clean(); // Get the buffered navigation menu content and clean the buffer
+    
+    if ( is_page( 'start-neu-928' ) ) :
+    ?>
+    <div class="header-wrapper">
+        <div class="logotop <?php echo $location; ?>">
+            <a href="#start" rel="home">
+                <?php echo $logotop_content; ?>
+            </a>
+        </div>
+        <?php
+        echo $navigation; // Display navigation menu on the specific page
+        ?>
+    </div>
+    <?php        
+    endif;
+    echo "<header id='masthead' class='site-header " . $location . "'>";
+    ?>
+            <div class="site-branding">
+            <div class="mobile-top-bg"></div>
+            <div class="hero-cont">
+                <?php julianablumenschein_post_thumbnail('full',array('class' => 'start-hero')); ?>
+            </div>
+            <?php
+            if ( ! is_page( 'start-neu-928' ) ) :
+            ?>
+            <div class="title-cont">
+                <h1 class="site-title site-title-<?php echo $location; ?>"><?php echo $site_name; ?></h1>
+            </div>
+            <div class="logotop <?php echo $location; ?>">
+                <a href="#start" rel="home">
+                    <?php echo $logotop_content; ?>
+                </a>
+            </div>
+            <?php
+            endif;
+            ?>
+		</div><!-- .site-branding -->
+        <?php
+        if ( is_front_page() && !is_page( 'start-neu-928' ) ) : //( ... || is_home() )
+        ?>
+        <?php echo $navigation; ?>  // Display navigation menu on the front page
+        <?php
+        elseif ( !is_front_page() && !is_page( 'start-neu-928' ) ) : //( ... || is_home() )
+        ?>
+        <nav id="site-navigation" class="main-navigation">
+            <div class="section-content centered">    
+            <?php
+            wp_nav_menu( array(
+                'theme_location' => 'menu-2',
+                'menu_id'        => 'social-menu',
+            ) );
             ?>    
             </div>    
 		</nav><!-- #site-navigation -->            
         <?php
-            endif;
+        endif;
         ?>
 	</header><!-- #masthead -->
 
