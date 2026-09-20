@@ -1011,16 +1011,9 @@ a{
 }
 
 .cta-wrap{
-    display: inline-block;
     text-align: center;
-    left: 0;
-    right: 0;
-    width: auto;
-    height: auto;
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
+    position: relative;
+    padding-top: 5%;
 }
 
 .btn.cta,
@@ -1570,10 +1563,12 @@ footer .section-content.centered{
 }
 
 #newsletter .btn.cta{
+    display: inline-block;
+	/*
     margin-left: auto;
     margin-right: auto;
-    display: inline-block;
     transform: translateX(-50%);
+	*/
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
