@@ -2999,6 +2999,11 @@ input#coupon_code{
 	content:'';
 }
 
+#newsletter p {
+	display: none;
+}
+
+
 
 /* styles start-neu */
 body.page-id-928,
