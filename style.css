@@ -3006,6 +3006,142 @@ input#coupon_code{
 
 
 /* styles start-neu */
+
+body.page-id-928 #wpadminbar {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+body.page-id-928 #wpadminbar:hover {
+    opacity: 1;
+}
+
+body.page-id-928::selection {  
+    color: #fef9f3; 
+    background: #a8414dAA;
+}
+
+body.page-id-928 #masthead.home,
+body.page-id-928 #content,
+body.page-id-928 footer{
+    position: relative;
+}
+
+body.page-id-928 #masthead .site-branding {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+body.page-id-928 #site-navigation {
+    height: auto;
+}
+
+body.page-id-928 #site-navigation .section-content.centered {
+    padding-bottom: 0;
+}
+
+body.page-id-928 .header-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+body.page-id-928 #primary-menu {
+    position: relative;
+    inset: 0;
+    padding: 0;
+    margin: 0;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+body.page-id-928 #primary-menu .menu-item {
+    display: inline-flex;
+    padding: 0;
+    opacity: initial;
+}
+
+body.page-id-928 #primary-menu .menu-item .fas {
+    display: none;
+}
+
+body.page-id-928 #primary-menu .menu-item span {
+    font-family: "Cormorant Garamond", serif;
+    text-transform: uppercase;
+    line-height: 3;
+    position: static;
+    opacity: initial;
+}
+
+/* start social styles */
+
+body.page-id-928 #social-menu a,
+body.page-id-928 #social-menu a:visited{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #a8414dEE;
+    transition: all 0.3s ease-in-out;
+}
+
+body.page-id-928 #social-menu a,
+body.page-id-928 #woocommerce-menu a,
+body.page-id-928 footer #social-menu a{
+    font-size: 2.4rem;    
+}
+
+body.page-id-928 .menu-social-menu-container,
+body.page-id-928 .menu-woocommerce-container{    
+    margin: 0 auto;
+    position: fixed;
+    top: 2.5rem;
+    z-index: 999999999;
+}
+
+body.page-id-928 #social-menu{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+body.page-id-928 #social-menu a:hover,
+body.page-id-928 #woocommerce-menu a:hover{
+    color: #a8414dFF;
+}
+
+body.page-id-928 #social-menu li:hover,
+body.page-id-928 #woocommerce-menu li:hover{
+    opacity: 1;
+}
+
+body.page-id-928 #social-menu,
+body.page-id-928 #woocommerce-menu{
+    list-style-type: none;
+}
+
+body.page-id-928 ul#social-menu li{
+    display: inline-block;
+    margin-right: 1rem;
+}
+/* end social styles */
+
+body.page-id-928 .logotop {
+    background: none;
+    text-align: center;
+    height: auto;
+    position: relative;
+}
+
+body.page-id-928 .logotop .logo {
+  color: #a8414d;
+  width: 250px;
+  height: auto;
+}
+
 body.page-id-928,
 body.page-id-928 .section-content.centered p,
 body.page-id-928 a,
@@ -3131,6 +3267,14 @@ body.page-id-928 .band-img.wp-post-image{
     filter: sepia(.4);
 }
 
+body.page-id-928 .thumb-caption {
+    background: #fef9f3CC;
+    transition: all 0.75s ease-in-out;
+}
+
+body.page-id-928 .thumb-caption p.caption-text {
+    color: #a8414d;
+}
 
 @media screen and (min-width: 1280px) {
     #band-thumbnails{
@@ -3148,5 +3292,14 @@ body.page-id-928 .band-img.wp-post-image{
         flex: 0 0 25%;
         width: auto;
         overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body.page-id-928 .section-content.centered h2 {
+        font-size: 4rem !important;
+    }
+    body.page-id-928 .band h3, .news-text-container h3 {
+        font-size: 2.4rem !important;   
     }
 }
