@@ -948,11 +948,6 @@ url("fonts/shimes/ShimesOne.otf") format("opentype"),
 url("fonts/shimes/ShimesOne.svg") format("svg");
 }
 
-::-moz-selection {  
-    color: rgba(246,36,89,1); 
-    background: #fff;
-}
-
 ::selection {
     color: rgba(246,36,89,1); 
     background: #fff;
@@ -1587,10 +1582,6 @@ footer .section-content.centered{
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #fff;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
   color: #fff;
 }
 
