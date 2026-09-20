@@ -21,7 +21,7 @@
         ?>
             <div class="band-thumbnail-wrap">
             <?php echo get_the_post_thumbnail( $post_id, 'large', array( 'class' => 'band-thumbnail' ) );?>
-            <div class="thumb-caption"><p><?php echo the_title(); ?></p></div>
+            <div class="thumb-caption"><p class="caption-text"><?php echo the_title(); ?></p></div>
             </div>
         <?php    
         }
