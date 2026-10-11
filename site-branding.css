@@ -183,7 +183,89 @@ body .woocommerce a.button:hover {
     border-color: #a8414d;
 }
 
+body.post-type-archive-dates::before {
+    display: none;
+    content: none;
+}
+
+body.post-type-archive-dates #content {
+    min-height: 70vh;
+    padding-top: 15rem;
+    background: #fef9f3;
+    color: #a8414d;
+}
+
+body.post-type-archive-dates #dates {
+    min-height: 70vh;
+    background: #fef9f3;
+    color: #a8414d;
+}
+
+body.post-type-archive-dates #dates .section-content.centered {
+    width: min(90%, 1100px);
+    padding: 0 0 8rem;
+    color: #a8414d;
+}
+
+body.post-type-archive-dates #dates .section-content.centered h2 {
+    padding: 0 0 3rem;
+    color: #a8414d;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 6rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+body.post-type-archive-dates #dates .date {
+    margin: 0;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #a8414d33;
+    color: #a8414d;
+    font-size: 1.8rem;
+}
+
+body.post-type-archive-dates #dates .date p {
+    margin: 0;
+    color: inherit;
+}
+
+body.post-type-archive-dates #dates .giglink,
+body.post-type-archive-dates #dates .giglink:visited {
+    color: #a8414d;
+}
+
+body.post-type-archive-dates #dates .giglink:hover,
+body.post-type-archive-dates #dates .giglink:focus {
+    color: #7f3039;
+}
+
+body.post-type-archive-dates #dates .gigdate {
+    padding-right: 1.5rem;
+    white-space: nowrap;
+}
+
+body.post-type-archive-dates #dates .cta-wrap {
+    padding-top: 4rem;
+}
+
 @media screen and (max-width: 767px) {
+    body.post-type-archive-dates #content {
+        padding-top: 12rem;
+    }
+
+    body.post-type-archive-dates #dates .section-content.centered h2 {
+        font-size: 4rem;
+    }
+
+    body.post-type-archive-dates #dates .date {
+        font-size: 1.6rem;
+    }
+
+    body.post-type-archive-dates #dates .gigdate {
+        display: block;
+        padding-right: 0;
+    }
+
     .header-wrapper .logotop {
         text-align: left;
     }
