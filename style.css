@@ -615,17 +615,11 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
-
-a:visited {
-	color: purple;
-}
-
-a:hover, a:focus, a:active {
-	color: midnightblue;
-}
+/* Replaced on page 928 by the Start Neu link colors.
+a { color: royalblue; }
+a:visited { color: purple; }
+a:hover, a:focus, a:active { color: midnightblue; }
+*/
 
 a:focus {
 	outline: thin dotted;
@@ -948,10 +942,9 @@ url("fonts/shimes/ShimesOne.otf") format("opentype"),
 url("fonts/shimes/ShimesOne.svg") format("svg");
 }
 
-::selection {
-    color: rgba(246,36,89,1); 
-    background: #fff;
-}
+/* Replaced on page 928 by the Start Neu selection colors.
+::selection { color: rgba(246,36,89,1); background: #fff; }
+*/
 
 html{
     font-size: 62.5%;
@@ -966,12 +959,12 @@ input,
 a,
 p,
 textarea{
-    font-family: 'Lato', sans-serif;
+    /* font-family: 'Lato', sans-serif; Replaced for page 928 by start-neu.css. */
     font-weight: 400;
 }
 
 h1{
-    color: #fff;
+    /* color: #fff; Replaced for page 928 by start-neu.css. */
     font-family: "ShimesOne", Arial, sans-serif;
     font-weight: 400;
     margin: 0;
@@ -987,7 +980,7 @@ p,
 .category-pressekit ul, 
 .category-pressekit li{
     font-size: 2rem;
-    font-weight: 300;
+    /* font-weight: 300; Replaced for page 928 by start-neu.css. */
 }
 
 a{
@@ -1022,18 +1015,17 @@ a{
     font-weight: 300;
     padding: 10px 15px;
     background: transparent;
-    color: #fff;
+    /* color: #fff; Replaced for page 928 by start-neu.css. */
     transition: all 0.3s ease-in-out;
-    border: 2px solid #fff;
-    border-radius: 10px; 
+    /* border: 2px solid #fff; Replaced for page 928 by start-neu.css. */
+    /* border-radius: 10px; Replaced for page 928 by start-neu.css. */
 }
 
 /* also cta styles in woocommerce section */
 
-.btn.cta:hover{
-    background: rgba(246,36,89,1);
-    border-color: rgba(246,36,89,1);
-}
+/* Replaced for page 928 by start-neu.css:
+.btn.cta:hover { background: rgba(246,36,89,1); border-color: rgba(246,36,89,1); }
+*/
 
 #masthead.home{
     height: 96vh;
@@ -1051,13 +1043,15 @@ a{
     position: relative;
 }
 
-.title-cont{
-    position: absolute;    
-    bottom: 0;    
+/* Replaced for page 928 by start-neu.css, which hides this title panel:
+.title-cont {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 30%;
-    background: linear-gradient(0deg, rgba(16,25,22,0.8) 40%, rgba(16,25,22,0.4) 90%, transparent);    
+    background: linear-gradient(0deg, rgba(16,25,22,0.8) 40%, rgba(16,25,22,0.4) 90%, transparent);
 }
+*/
 
 footer h1{
     font-size: 100%;
@@ -1086,7 +1080,7 @@ header #social-menu a:visited,
 header #woocommerce-menu a:visited{
     font-size: 2rem;
     text-decoration: none;
-    color: rgba(255,255,255,0.75);
+    /* color: rgba(255,255,255,0.75); Replaced for page 928 by start-neu.css. */
     transition: all 0.3s ease-in-out;
 }
 
@@ -1109,12 +1103,10 @@ header #social-menu{
     padding-left: 0;
 }
 
-footer a:hover,
-header a:hover,
-header #social-menu a:hover,
-header #woocommerce-menu a:hover{
-    color: rgba(255,255,255,1);
-}
+/* Replaced for page 928 by start-neu.css:
+footer a:hover, header a:hover, header #social-menu a:hover,
+header #woocommerce-menu a:hover { color: rgba(255,255,255,1); }
+*/
 
 header #social-menu li:hover,
 header #woocommerce-menu li:hover{
@@ -1189,7 +1181,7 @@ footer .section-content.centered{
     position: absolute;
     height: 2px;
     width: 100%;
-    background: #fff;
+    /* background: #fff; Replaced for page 928 by start-neu.css. */
     transition: all 0.3s ease-in-out;
 }
 
@@ -1240,7 +1232,7 @@ footer .section-content.centered{
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    color: #fff;
+    /* color: #fff; Replaced for page 928 by start-neu.css text colors. */
     padding-bottom: 8rem;
     max-width: 1600px !important;
     position: relative;
@@ -1254,33 +1246,33 @@ footer .section-content.centered{
 #start .section-content.centered h2, 
 .woocommerce-page:not(.woocommerce-order-received) .section-content.centered h2,
 .archive .section-content.centered h2{
-    font-family: "ShimesOne", Arial, sans-serif;
-    font-size: 15rem;
+    /* font-family: "ShimesOne", Arial, sans-serif; Replaced for page 928 by start-neu.css. */
+    /* font-size: 15rem; Replaced for page 928 by start-neu.css. */
     text-align: center;
-    font-weight: 400;
+    /* font-weight: 400; Replaced for page 928 by start-neu.css. */
     padding-top: 4%;
     padding-bottom: 3.2%
 }
 
+/* Replaced on page 928 by the Start Neu section backgrounds.
 .entry-content > div:nth-of-type(odd),
 .woocommerce-page #content,
-.archive #content{
-    background: rgba(16,25,22,0.8);
-}
+.archive #content { background: rgba(16,25,22,0.8); }
+*/
 
 .archive #content{
     position: relative;
 }
 
+/* Replaced on page 928 by the Start Neu alternating backgrounds.
 .entry-content > div:nth-of-type(2),
-.entry-content > div:nth-of-type(6){
-    background: rgba(33,165,138,0.9);
-}
+.entry-content > div:nth-of-type(6) { background: rgba(33,165,138,0.9); }
+*/
 
+/* Replaced on page 928 by the Start Neu alternating backgrounds.
 .entry-content > div:nth-of-type(4),
-.entry-content > div:nth-of-type(8){
-    background: rgba(246,36,89,0.9);
-}
+.entry-content > div:nth-of-type(8) { background: rgba(246,36,89,0.9); }
+*/
 
 .band h3{
     font-size: 300%;
@@ -1390,17 +1382,15 @@ footer .section-content.centered{
     clear: none;
 }
 
-#site-navigation{
-	height: 8.5rem;
-}
+/* Replaced for page 928 by start-neu.css: #site-navigation { height: 8.5rem; } */
 
 .logotop {
-    position: fixed;
+    /* position: fixed; Replaced for page 928 by start-neu.css. */
     top: 0;
-    background: rgba(16,25,22,0.8);
+    /* background: rgba(16,25,22,0.8); Replaced for page 928 by start-neu.css. */
     width: 100%;
-    height: 8.5rem;
-    z-index: 99999999;
+    /* height: 8.5rem; Replaced for page 928 by start-neu.css. */
+    /* z-index: 99999999; Replaced for page 928 by start-neu.css. */
     overflow: hidden;
 }
 
@@ -1434,7 +1424,7 @@ footer .section-content.centered{
 
 .date{
     font-weight: 400;
-    color: rgba(255,255,255,0.75);
+    /* color: rgba(255,255,255,0.75); Replaced for page 928 by start-neu.css. */
     text-align: left; 
     margin-bottom: 1.5%;
     line-height: 1.3;
@@ -1457,7 +1447,7 @@ footer .section-content.centered{
     font-size: 2rem;
     font-weight: 400;
     text-decoration: none;
-    color: rgba(255,255,255,0.75);
+    /* color: rgba(255,255,255,0.75); Replaced for page 928 by start-neu.css. */
     transition: all 0.3s ease-in-out;
 }
 
@@ -1466,7 +1456,7 @@ footer .section-content.centered{
 	font-size: 2rem;
 	font-weight: 400;
 	text-decoration: none;
-    color: rgba(255,255,255,0.75);
+    /* color: rgba(255,255,255,0.75); Replaced for page 928 by start-neu.css. */
     transition: all 0.3s ease-in-out;
 }
 
@@ -1475,14 +1465,12 @@ footer .section-content.centered{
     font-size: 100% !important;
 }
 
-.giglink:hover,
-.band a:hover,
-.giglink:active,
-.band a:active,
-.single-post #corporate a:hover,
-.single-post #corporate a:active{
+/* Replaced for page 928 by start-neu.css:
+.giglink:hover, .band a:hover, .giglink:active, .band a:active,
+.single-post #corporate a:hover, .single-post #corporate a:active {
     color: rgba(255,255,255,1);
 }
+*/
 
 .woocommerce {
     position: relative;
@@ -1567,7 +1555,7 @@ footer .section-content.centered{
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
+    /* color: #fff; Replaced for page 928 by start-neu.css. */
   opacity: 1; /* Firefox */
 }
 
@@ -1589,9 +1577,7 @@ span.wpcf7-not-valid-tip{
     font-weight: 300;
 }
 
-footer{
-    background: #101916;
-}
+/* Replaced for page 928 by the Start Neu surface color: footer { background: #101916; } */
 
 .archive footer{
     position: relative;
@@ -1604,7 +1590,7 @@ div.wpcf7 .ajax-loader{
 label{
     font-size: 160% /*!important*/;
     font-weight: 300;
-    color: #fff !important;
+    /* color: #fff !important; Replaced for page 928 by start-neu.css. */
 }
 
 .nonabsolute-single{
@@ -1668,13 +1654,13 @@ label{
 	
 	.home #site-navigation,
     #start #site-navigation{
-	    width: 20%;
-	    display: inline-block;
+        /* width: 20%; Replaced for page 928 by start-neu.css. */
+        /* display: inline-block; Replaced for page 928 by start-neu.css. */
 	    top: 0;
 	    right: 0;
-	    position: fixed;
-		z-index: 99999999;
-		transition: all 0.6s ease-in-out;	
+        /* position: fixed; Replaced for page 928 by start-neu.css. */
+        /* z-index: 99999999; Replaced for page 928 by start-neu.css. */
+        /* transition: all 0.6s ease-in-out; Replaced for page 928 by start-neu.css. */
 	}
 	
 	#no-start #site-navigation{
@@ -1715,9 +1701,7 @@ label{
         font-size: 400%;
     }
     
-    .menu-toggle{
-        display: block;
-    }
+    /* Replaced for page 928 by breakpoint rules in start-neu.css: .menu-toggle { display: block; } */
     
     body:not(.page-id-928) header .menu-hauptmenu-container {
         position: fixed;
@@ -1739,39 +1723,43 @@ label{
     #primary-menu{
         position: relative;
         max-width: initial !important; 
-        top: 55%;
-        transform: translateY(-55%);
+        /* top: 55%; Replaced for page 928 by start-neu.css. */
+        /* transform: translateY(-55%); Replaced for page 928 by start-neu.css. */
         width: 100%;
-        margin-left: 0;
-        padding-left: 5%;
+        /* margin-left: 0; Replaced for page 928 by start-neu.css. */
+        /* padding-left: 5%; Replaced for page 928 by start-neu.css. */
     }
     
     #primary-menu .menu-item{
         list-style-type: none;
         position: relative;
-        padding-bottom: 1.5rem;        
+        /* padding-bottom: 1.5rem; Replaced for page 928 by start-neu.css. */
     }
 
     #primary-menu .menu-item a{
-        color: #fff;
+        /* color: #fff; Replaced for page 928 by start-neu.css. */
         text-decoration: none;
     }
     
-    #primary-menu .menu-item .fas{
+    /* Replaced for page 928, where primary-menu icons are hidden:
+    #primary-menu .menu-item .fas {
         font-size: 240%; 
         padding-right: 1rem;
-    }    
+    }
+    */
     
     #primary-menu .menu-item span{
         font-size: 200%;   
     }
     
-    .mobile-top-bg{
+    /* Replaced on page 928, where .mobile-top-bg is hidden:
+    .mobile-top-bg {
         position: fixed;
         top: 0;
         background: linear-gradient(180deg, rgba(16,25,22,0.8) 0%, transparent 15%);
         width: 100%;
     }
+    */
     
     header .menu-social-menu-container{
         display: none;
@@ -1782,9 +1770,9 @@ label{
         bottom: 0%;
     }    
 
-    .menu-woocommerce-container{
-        display: none;
-    }    
+    /* Replaced for page 928 by start-neu.css:
+    .menu-woocommerce-container { display: none; }
+    */
 
     .section-content.centered{
         width: 90%;
@@ -1878,10 +1866,10 @@ label{
     #start .section-content.centered h2,
     .woocommerce-page .section-content.centered h2,
     .archive .section-content.centered h2{
-        font-size: 8rem;
+        /* font-size: 8rem; Replaced for page 928 by start-neu.css. */
         line-height: 0.75;
         padding-bottom: 10%;
-        padding-top: 30%;
+        /* padding-top: 30%; Replaced for page 928 by start-neu.css. */
     }
     
     .entry-content > div{
@@ -2158,13 +2146,13 @@ label{
     #primary-menu .menu-item{
         list-style-type: none;
         position: relative;
-        padding-bottom: 52%;
-        opacity: 0.5;
+        /* padding-bottom: 52%; Replaced for page 928 by start-neu.css. */
+        /* opacity: 0.5; Replaced for page 928 by start-neu.css. */
         transition: all 0.3s ease-in-out;
     }
 
     #primary-menu .menu-item a{
-        color: #fff;
+        /* color: #fff; Replaced for page 928 by start-neu.css. */
         text-decoration: none;
     }
 
@@ -2333,9 +2321,9 @@ label{
         height: 56rem;
     }
     
-    .logotop.home{
-        display: none;
-    }
+    /* Replaced for page 928 by start-neu.css, which keeps the logo visible:
+    .logotop.home { display: none; }
+    */
 
     #start .logotop.home {
         width: 100%;
@@ -2509,26 +2497,13 @@ label{
         padding-left: 0;    
     }
     
-    .menu-toggle{
-        top: 3rem;
-    }
-    
-    .menu-toggle #hamburger{
-        width: 3rem;
-        height: 2.5rem;
-    }
-    
-    .menu-toggle #hamburger .hamburger-line{
-        height: 4px; 
-    }
-    
-    .menu-toggle.open .hamburger-line:first-of-type{
-        top: 1.1rem;
-    }
-    
-    .menu-toggle.open .hamburger-line:nth-of-type(3){
-        bottom: 1.1rem;
-    }
+    /* Replaced for page 928, where the menu toggle is hidden at tablet width:
+    .menu-toggle { top: 3rem; }
+    .menu-toggle #hamburger { width: 3rem; height: 2.5rem; }
+    .menu-toggle #hamburger .hamburger-line { height: 4px; }
+    .menu-toggle.open .hamburger-line:first-of-type { top: 1.1rem; }
+    .menu-toggle.open .hamburger-line:nth-of-type(3) { bottom: 1.1rem; }
+    */
     
     .logotop.home h1.site-title.site-title-home,
     #no-start .logotop.nohome h1{
@@ -2537,12 +2512,12 @@ label{
         padding-left: 5%;
     }
     
+    /* Replaced for page 928 by start-neu.css:
     .home .section-content.centered h2,
     #start .section-content.centered h2,
     .woocommerce-page .section-content.centered h2,
-    .archive .section-content.centered h2{
-        font-size: 12rem;
-    }
+    .archive .section-content.centered h2 { font-size: 12rem; }
+    */
     
     .btn.cta, 
     .tnp-submit.btn.cta{
@@ -2708,19 +2683,15 @@ label{
     font-size: 1.6rem;
 }
 
-#newsletter a, 
-#newsletter a:visited{
-    /*
-    color: rgba(246,36,89,1);
-    */
-    color: rgba(255,255,255,0.75);
+#newsletter a,
+#newsletter a:visited {
+    /* color: rgba(255,255,255,0.75); Replaced for page 928 by start-neu.css. */
     transition: all 0.3s ease-in-out;
 }
 
-#newsletter a:hover, 
-#newsletter a:active{
-    color: #fff;
-}
+/* Replaced for page 928 by start-neu.css:
+#newsletter a:hover, #newsletter a:active { color: #fff; }
+*/
 
 .single-post .entry-title{
     font-family: 'Lato', sans-serif;
@@ -2750,7 +2721,7 @@ label{
         height: 16rem;
     }
 }
-
+        /* padding-top: 9%; Replaced for page 928 by start-neu.css. */
 
 /* woocommerce */
 
@@ -2826,9 +2797,10 @@ label{
     text-align: center;
 }
 
-.woocommerce div.product p.price, .woocommerce div.product span.price{
-    color: #fff;
-}
+/* Replaced for page 928 by the Start Neu text palette:
+.woocommerce div.product p.price,
+.woocommerce div.product span.price { color: #fff; }
+*/
 
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,
 .btn.cta, .tnp-submit.btn.cta, .woocommerce button, .woocommerce input[type="button"], .woocommerce input[type="reset"], .woocommerce input[type="submit"],
@@ -2837,7 +2809,7 @@ label{
     font-weight: 300;
     padding: 10px 15px;
     background: transparent;
-    color: #fff;
+    /* color: #fff; Replaced for page 928 by start-neu.css. */
     transition: all 0.3s ease-in-out;
     border: 2px solid #fff;
     border-radius: 10px;
@@ -2945,7 +2917,7 @@ label{
 .woocommerce-page main,
 .woocommerce-page main label,
 .woocommerce-page main button{
-    color: #fff;
+    /* color: #fff; Replaced for page 928 by start-neu.css. */
     font-size: 2rem;
 }
 
@@ -2956,7 +2928,7 @@ label{
 .woocommerce-page main a,
 .woocommerce-page main p:not(.return-to-shop) a,
 .actions button[type="submit"]{
-    color: rgba(246,36,89,1);
+    /* color: rgba(246,36,89,1); Replaced for page 928 by start-neu.css. */
     border: none;
     transition: all 0.3s ease-in-out;
 }
@@ -2978,9 +2950,7 @@ label{
     width: 1rem;
 }
 
-.payment_box label{
-    color: #515151 !important;
-}
+/* Replaced for page 928 by start-neu.css: .payment_box label { color: #515151 !important; } */
 
 input#coupon_code{
     width: auto !important;
