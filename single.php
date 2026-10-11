@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area single-post">
+<div id="primary" class="content-area single-post single">
 	<main id="main" class="site-main">
 		<!-- single -> looks for template-parts/content/<?php get_post_type(); ?> -->
 	<?php

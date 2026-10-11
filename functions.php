@@ -87,6 +87,12 @@ if ( ! function_exists( 'julianablumenschein_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'julianablumenschein_setup' );
 
+function julianablumenschein_add_branding_body_class( $classes ) {
+  $classes[] = 'site-branding-theme';
+  return $classes;
+}
+add_filter( 'body_class', 'julianablumenschein_add_branding_body_class' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -125,10 +131,63 @@ add_action( 'widgets_init', 'julianablumenschein_widgets_init' );
  */
 function julianablumenschein_scripts() {
 	wp_enqueue_style( 'julianablumenschein-style', get_stylesheet_uri() );
+  $branding_style_path = get_template_directory() . '/site-branding.css';
+  wp_enqueue_style(
+    'julianablumenschein-site-branding',
+    get_template_directory_uri() . '/site-branding.css',
+    array( 'julianablumenschein-style' ),
+    file_exists( $branding_style_path ) ? filemtime( $branding_style_path ) : null
+  );
 
-	wp_enqueue_script( 'julianablumenschein-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+  if ( is_page( 'start-neu-928' ) ) {
+    $start_neu_css_path = get_template_directory() . '/start-neu.css';
+    wp_enqueue_style(
+      'julianablumenschein-start-neu',
+      get_template_directory_uri() . '/start-neu.css',
+      array( 'julianablumenschein-style' ),
+      file_exists( $start_neu_css_path ) ? filemtime( $start_neu_css_path ) : null
+    );
+  }
+
+  if ( ! is_page( 'start-neu-928' ) ) {
+    wp_enqueue_script( 'julianablumenschein-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+  }
 
 	wp_enqueue_script( 'julianablumenschein-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+  $common_script_path = get_template_directory() . '/js/site-common.js';
+  wp_enqueue_script(
+    'julianablumenschein-site-common',
+    get_template_directory_uri() . '/js/site-common.js',
+    array( 'jquery' ),
+    file_exists( $common_script_path ) ? filemtime( $common_script_path ) : null,
+    true
+  );
+
+  if ( is_page( 'start-neu-928' ) ) {
+    $start_script_path = get_template_directory() . '/js/start-neu.js';
+    wp_enqueue_script(
+      'julianablumenschein-start-neu',
+      get_template_directory_uri() . '/js/start-neu.js',
+      array( 'jquery', 'julianablumenschein-site-common' ),
+      file_exists( $start_script_path ) ? filemtime( $start_script_path ) : null,
+      true
+    );
+  } else {
+    $legacy_script_path = get_template_directory() . '/js/site-legacy.js';
+    wp_enqueue_script(
+      'julianablumenschein-site-legacy',
+      get_template_directory_uri() . '/js/site-legacy.js',
+      array( 'jquery', 'julianablumenschein-site-common' ),
+      file_exists( $legacy_script_path ) ? filemtime( $legacy_script_path ) : null,
+      true
+    );
+    wp_localize_script(
+      'julianablumenschein-site-legacy',
+      'julianaTheme',
+      array( 'homeUrl' => home_url( '/' ) )
+    );
+  }
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -221,8 +280,8 @@ add_theme_support( 'custom-header', $defaults );
 // add_theme_support( 'wp-block-styles' );
 
 // New Custom page types
-add_action( 'init', 'create_post_type' );
-function create_post_type() {
+add_action( 'init', 'julianablumenschein_create_post_type' );
+function julianablumenschein_create_post_type() {
   // YouTube    
   register_post_type( 'videos',
     array(
@@ -342,9 +401,9 @@ function ts_quantity_minus_sign() {
    echo '<button type="button" class="quantity-button minus" id="quantity-minus">-</button>';
 }
  
-add_action( 'wp_footer', 'ts_quantity_plus_minus' );
+add_action( 'wp_footer', 'julianablumenschein_ts_quantity_plus_minus' );
  
-function ts_quantity_plus_minus() {
+function julianablumenschein_ts_quantity_plus_minus() {
    // To run this on the single product page
    //if ( ! is_product() ) return;
    ?>
@@ -392,7 +451,7 @@ add_theme_support( 'wc-product-gallery-zoom' );
 add_theme_support( 'wc-product-gallery-lightbox' );
 add_theme_support( 'wc-product-gallery-slider' );
 
-function gallery_scripts() {
+function julianablumenschein_gallery_scripts() {
         if ( current_theme_supports( 'wc-product-gallery-zoom' ) ) { 
             wp_enqueue_script( 'zoom' );
         }
@@ -407,7 +466,7 @@ function gallery_scripts() {
         wp_enqueue_script( 'wc-single-product' );
 }
 
-add_action( 'wp_enqueue_scripts', 'gallery_scripts', 20 );
+add_action( 'wp_enqueue_scripts', 'julianablumenschein_gallery_scripts', 20 );
 
 add_filter( 'woocommerce_get_image_size_gallery_thumbnail', 'cg_woocommerce_image_size_gallery_thumbnail', 99 );
 function cg_woocommerce_image_size_gallery_thumbnail( $size ) {

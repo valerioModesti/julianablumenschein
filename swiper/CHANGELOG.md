@@ -330,7 +330,7 @@
   * New `hashnavWatchState` parameter to navigate through slides (when hashnav is enabled) by browser history or by setting directly hash on document location
   * New `replaceState` parameter that work in addition to hashnav or history to replace current url state with the new one instead of adding it to history
   * New methods `s.unsetGrabCursor()` and `s.setGrabCursor()` to enable/disable grab cursor
-  * Draggable Scrollbar now works when `simulateTouch:false `
+  * Draggable Scrollbar now works when `simulateTouch:false`
   * New `normalizeSlideIndex` parameter to improve work of controller (see #1766)
   * `lazyLoadingInPrevNextAmount` now works with `slidesPerView: 'auto'`
   * New `passiveListeners` parameter to use passive event listeners to improve scrolling performance on mobile devices. Enabled by default
