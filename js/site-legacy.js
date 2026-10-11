@@ -3,36 +3,6 @@
 
     $(function () {
         var $body = $('body');
-        var $menuToggle = $('.menu-toggle');
-        var $siteNavigation = $('#site-navigation');
-        var $mobileMenus = $('.menu-hauptmenu-container, header .menu-social-menu-container, header .menu-woocommerce-container');
-
-        if ($(window).width() < 1250) {
-            if (!$body.hasClass('home')) {
-                $('.menu-hauptmenu-container').addClass('lower').css({ display: 'none' });
-            }
-
-            function setMobileMenuOpen(isOpen) {
-                $menuToggle.toggleClass('open', isOpen).attr('aria-expanded', isOpen);
-                $siteNavigation.toggleClass('open', isOpen);
-                $body.css('overflow', isOpen ? 'hidden' : '');
-
-                if (isOpen) {
-                    $mobileMenus.stop(true, true).fadeIn(600).addClass('open');
-                } else {
-                    $mobileMenus.stop(true, true).fadeOut(600).removeClass('open');
-                }
-            }
-
-            $menuToggle.on('click', function () {
-                setMobileMenuOpen(!$siteNavigation.hasClass('open'));
-            });
-
-            $('.menu-item, .logotop.home a').on('click', function () {
-                setMobileMenuOpen(false);
-            });
-        }
-
         $('.logotop.home').css({ display: 'none' });
         $(window).on('scroll', function () {
             if ($(window).scrollTop() > 0) {

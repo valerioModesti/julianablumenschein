@@ -120,13 +120,24 @@ function julianablumenschein_widgets_init() {
 }
 add_action( 'widgets_init', 'julianablumenschein_widgets_init' );
 
+function julianablumenschein_is_start_neu_page() {
+  return is_page( 928 ) || ( is_front_page() && 928 === (int) get_queried_object_id() );
+}
+
 /**
  * Enqueue scripts and styles.
  */
 function julianablumenschein_scripts() {
 	wp_enqueue_style( 'julianablumenschein-style', get_stylesheet_uri() );
+  $branding_style_path = get_template_directory() . '/site-branding.css';
+  wp_enqueue_style(
+    'julianablumenschein-site-branding',
+    get_template_directory_uri() . '/site-branding.css',
+    array( 'julianablumenschein-style' ),
+    file_exists( $branding_style_path ) ? filemtime( $branding_style_path ) : null
+  );
 
-  if ( is_page( 'start-neu-928' ) ) {
+  if ( julianablumenschein_is_start_neu_page() ) {
     $start_neu_css_path = get_template_directory() . '/start-neu.css';
     wp_enqueue_style(
       'julianablumenschein-start-neu',
@@ -136,7 +147,7 @@ function julianablumenschein_scripts() {
     );
   }
 
-  if ( ! is_page( 'start-neu-928' ) ) {
+  if ( ! julianablumenschein_is_start_neu_page() ) {
     wp_enqueue_script( 'julianablumenschein-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
   }
 
@@ -151,16 +162,16 @@ function julianablumenschein_scripts() {
     true
   );
 
-  if ( is_page( 'start-neu-928' ) ) {
-    $start_script_path = get_template_directory() . '/js/start-neu.js';
-    wp_enqueue_script(
-      'julianablumenschein-start-neu',
-      get_template_directory_uri() . '/js/start-neu.js',
-      array( 'jquery', 'julianablumenschein-site-common' ),
-      file_exists( $start_script_path ) ? filemtime( $start_script_path ) : null,
-      true
-    );
-  } else {
+  $menu_script_path = get_template_directory() . '/js/site-menu.js';
+  wp_enqueue_script(
+    'julianablumenschein-site-menu',
+    get_template_directory_uri() . '/js/site-menu.js',
+    array( 'jquery' ),
+    file_exists( $menu_script_path ) ? filemtime( $menu_script_path ) : null,
+    true
+  );
+
+  if ( ! julianablumenschein_is_start_neu_page() ) {
     $legacy_script_path = get_template_directory() . '/js/site-legacy.js';
     wp_enqueue_script(
       'julianablumenschein-site-legacy',

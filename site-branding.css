@@ -1,0 +1,240 @@
+/* Shared branding based on the Start Neu visual identity. */
+body {
+    color: #a8414d;
+}
+
+body,
+body button,
+body input,
+body select,
+body optgroup,
+body textarea,
+body p {
+    font-family: "Ubuntu Mono", monospace;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    color: #a8414d;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+}
+
+body a,
+body a:visited {
+    color: #a8414d;
+}
+
+body a:hover,
+body a:focus,
+body a:active {
+    color: #7f3039;
+}
+
+body .logotop,
+body .header-wrapper,
+body #site-navigation,
+body .site-footer {
+    background-color: #fef9f3;
+}
+
+body header #primary-menu a,
+body header #social-menu a,
+body header #woocommerce-menu a,
+body .site-footer a,
+body .site-footer a:visited {
+    color: #a8414d;
+}
+
+body .menu-toggle #hamburger .hamburger-line {
+    background-color: #a8414d;
+}
+
+body .logotop .logo,
+body .site-footer .logo-img {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+body .site-footer .logo-img {
+    margin: 0 auto;
+}
+
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    background-color: #fef9f3;
+    box-shadow: 0 .1rem 3rem #a8414d66;
+}
+
+.header-wrapper .logotop {
+    position: relative;
+    top: auto;
+    z-index: 9;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    background: transparent;
+    text-align: center;
+}
+
+.header-wrapper .logotop > a {
+    display: inline-block;
+    padding: .8rem 1rem;
+}
+
+.header-wrapper .logotop .logo {
+    position: static;
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.header-wrapper #site-navigation {
+    position: relative;
+    z-index: 99;
+    display: block;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    transition: none;
+}
+
+.header-wrapper #site-navigation .section-content.centered {
+    width: 80%;
+    padding-bottom: 0;
+}
+
+.header-wrapper .menu-hauptmenu-container {
+    display: block;
+}
+
+.header-wrapper .secondary-menu {
+    position: fixed;
+    top: 20px;
+    left: 10%;
+    z-index: 100;
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-wrapper .secondary-menu .menu-social-menu-container,
+.header-wrapper .secondary-menu .menu-woocommerce-container {
+    position: static;
+    width: auto;
+    margin: 0;
+}
+
+.header-wrapper .secondary-menu #social-menu,
+.header-wrapper .secondary-menu #woocommerce-menu {
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+.header-wrapper .menu-toggle {
+    display: none;
+}
+
+.header-wrapper .menu-hauptmenu-container {
+    display: block;
+}
+
+.header-wrapper #primary-menu {
+    position: relative;
+    inset: auto;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transform: none;
+}
+
+body .btn.cta,
+body .tnp-submit.btn.cta,
+body .woocommerce button,
+body .woocommerce a.button {
+    color: #a8414d;
+    border-color: #a8414d;
+    border-radius: 0;
+}
+
+body .btn.cta:hover,
+body .tnp-submit.btn.cta:hover,
+body .woocommerce button:hover,
+body .woocommerce a.button:hover {
+    color: #fef9f3;
+    background-color: #a8414d;
+    border-color: #a8414d;
+}
+
+@media screen and (max-width: 767px) {
+    .header-wrapper .logotop {
+        text-align: left;
+    }
+
+    .header-wrapper .logotop .logo {
+        width: 200px;
+        margin: 0;
+    }
+
+    .header-wrapper #site-navigation .section-content.centered {
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .header-wrapper .menu-toggle {
+        display: block;
+    }
+
+    .header-wrapper .menu-hauptmenu-container {
+        position: fixed;
+        inset: 0;
+        z-index: 99;
+        display: none;
+        width: 100%;
+        height: 100vh;
+        background: #fef9f3;
+    }
+
+    .header-wrapper .menu-hauptmenu-container.open {
+        display: block;
+    }
+
+    .header-wrapper #primary-menu {
+        height: 70vh;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 8.5rem;
+        padding: 1rem 5%;
+    }
+
+    .header-wrapper .secondary-menu {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+        padding: 1rem 2rem;
+        background: #fef9f3;
+    }
+
+    body .site-footer .logo-img {
+        margin: 0 auto;
+    }
+}
