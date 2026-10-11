@@ -38,52 +38,44 @@
 <?php // phpinfo(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'julianablumenschein' ); ?></a>
-    
-    <?php
-    ob_start(); // Start output buffering for navigation menu
-    ?>
-    <nav id="site-navigation" class="main-navigation">
-        <div class="section-content centered">
-            <div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <div id="hamburger">
-                    <div class="hamburger-line"></div>
-                    <div class="hamburger-line"></div>
-                    <div class="hamburger-line"></div>
-                </div>
-            </div>
-            <div class="secondary-menu">
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'menu-2',
-                    'menu_id'        => 'social-menu',
-                ) );
-                wp_nav_menu( array(
-                    'theme_location' => 'menu-5',
-                    'menu_id'        => 'woocommerce-menu',
-                ) );
-                ?>
-            </div>
-            <?php
-            wp_nav_menu( array(
-                'theme_location' => 'menu-1',
-                'menu_id'        => 'primary-menu',
-            ) );
-            ?>
-        </div>
-    </nav><!-- #site-navigation -->
-    <?php
-    $navigation = ob_get_clean(); // Get the buffered navigation menu content and clean the buffer
-    ?>
     <div class="header-wrapper">
         <div class="logotop <?php echo $location; ?>">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <?php echo $logotop_content; ?>
             </a>
-        </div>
-        <?php echo $navigation; ?>
-    </div>
+        </div> <!-- logotop -->
+        <nav id="site-navigation" class="main-navigation">
+            <div class="section-content centered">
+                <div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <div id="hamburger">
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                    </div>
+                </div>
+                <div class="secondary-menu">
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'menu-2',
+                        'menu_id'        => 'social-menu',
+                    ) );
+                    wp_nav_menu( array(
+                        'theme_location' => 'menu-5',
+                        'menu_id'        => 'woocommerce-menu',
+                    ) );
+                    ?>
+                </div>
+                <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'menu-1',
+                    'menu_id'        => 'primary-menu',
+                ) );
+                ?>
+            </div>
+        </nav><!-- #site-navigation -->
+    </div> <!-- header-wrapper -->
     <?php echo '<header id="masthead" class="site-header ' . esc_attr( $location ) . '">'; ?>
-            <div class="site-branding">
+        <div class="site-branding">
             <div class="mobile-top-bg"></div>
             <div class="hero-cont">
                 <?php julianablumenschein_post_thumbnail('full',array('class' => 'start-hero')); ?>

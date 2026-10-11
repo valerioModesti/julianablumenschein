@@ -1,37 +1,37 @@
 /* styles start-neu */
 
-body.page-id-928 #wpadminbar {
+body.site-branding-theme #wpadminbar {
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
 
-body.page-id-928 #wpadminbar:hover {
+body.site-branding-theme #wpadminbar:hover {
     opacity: 1;
 }
 
-body.page-id-928::selection {
+body.site-branding-theme::selection {
     color: #fef9f3;
     background: #a8414dAA;
 }
 
-body.page-id-928 #masthead.home,
-body.page-id-928 #content,
-body.page-id-928 footer {
+body.site-branding-theme #masthead.home,
+body.site-branding-theme #content,
+body.site-branding-theme footer {
     position: relative;
 }
 
-body.page-id-928 #masthead .site-branding {
+body.site-branding-theme #masthead .site-branding {
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-body.page-id-928 .mobile-top-bg {
+body.site-branding-theme .mobile-top-bg {
     display: none;
 }
 
-body.page-id-928 .home #site-navigation,
-body.page-id-928#start #site-navigation {
+body.site-branding-theme .home #site-navigation,
+body.site-branding-theme #site-navigation {
     width: 100%;
     display: block;
     position: relative;
@@ -39,11 +39,11 @@ body.page-id-928#start #site-navigation {
     z-index: 99;
 }
 
-body.page-id-928 #site-navigation .section-content.centered {
+body.site-branding-theme #site-navigation .section-content.centered {
     padding-bottom: 0;
 }
 
-body.page-id-928 .header-wrapper {
+body.site-branding-theme .header-wrapper {
     position: fixed;
     top: 0;
     width: 100%;
@@ -52,7 +52,7 @@ body.page-id-928 .header-wrapper {
     box-shadow: 0rem .1rem 3rem 0rem #a8414d66;
 }
 
-body.page-id-928 #primary-menu {
+body.site-branding-theme #primary-menu {
     position: relative;
     inset: 0;
     padding: 0;
@@ -64,17 +64,17 @@ body.page-id-928 #primary-menu {
     align-items: center;
 }
 
-body.page-id-928 #primary-menu .menu-item {
+body.site-branding-theme #primary-menu .menu-item {
     display: inline-flex;
     padding: 0;
     opacity: initial;
 }
 
-body.page-id-928 #primary-menu .menu-item .fas {
+body.site-branding-theme #primary-menu .menu-item .fas {
     display: none;
 }
 
-body.page-id-928 #primary-menu .menu-item span {
+body.site-branding-theme #primary-menu .menu-item span {
     font-family: "Cormorant Garamond", serif;
     text-transform: uppercase;
     line-height: 3;
@@ -84,66 +84,66 @@ body.page-id-928 #primary-menu .menu-item span {
 
 /* start social styles */
 
-body.page-id-928 #social-menu a,
-body.page-id-928 #social-menu a:visited {
+body.site-branding-theme #social-menu a,
+body.site-branding-theme #social-menu a:visited {
     font-size: 2rem;
     text-decoration: none;
     color: #a8414dEE;
     transition: all 0.3s ease-in-out;
 }
 
-body.page-id-928 #social-menu a,
-body.page-id-928 #woocommerce-menu a,
-body.page-id-928 footer #social-menu a {
+body.site-branding-theme #social-menu a,
+body.site-branding-theme #woocommerce-menu a,
+body.site-branding-theme footer #social-menu a {
     font-size: 2.4rem;
 }
 
-body.page-id-928 .header-wrapper .menu-social-menu-container,
-body.page-id-928 .header-wrapper .menu-woocommerce-container {
+body.site-branding-theme .header-wrapper .menu-social-menu-container,
+body.site-branding-theme .header-wrapper .menu-woocommerce-container {
     width: auto;
 }
 
-body.page-id-928 #social-menu {
+body.site-branding-theme #social-menu {
     margin-left: 0;
     padding-left: 0;
 }
 
-body.page-id-928 #news-container h3,
-body.page-id-928 #shop h3,
-body.page-id-928 .band h3 {
+body.site-branding-theme #news-container h3,
+body.site-branding-theme #shop h3,
+body.site-branding-theme .band h3 {
     font-family: "Cormorant Garamond", serif;
 }
 
-body.page-id-928 .band h3 {
+body.site-branding-theme .band h3 {
     text-transform: uppercase;
     padding-bottom: 0;
 }
 
-body.page-id-928 #social-menu a:hover,
-body.page-id-928 #woocommerce-menu a:hover {
+body.site-branding-theme #social-menu a:hover,
+body.site-branding-theme #woocommerce-menu a:hover {
     color: #a8414dFF;
 }
 
-body.page-id-928 #social-menu li:hover,
-body.page-id-928 #woocommerce-menu li:hover {
+body.site-branding-theme #social-menu li:hover,
+body.site-branding-theme #woocommerce-menu li:hover {
     opacity: 1;
 }
 
-body.page-id-928 #social-menu,
-body.page-id-928 #woocommerce-menu {
+body.site-branding-theme #social-menu,
+body.site-branding-theme #woocommerce-menu {
     list-style-type: none;
     position: static;
     padding: 0;
     margin: 0;
 }
 
-body.page-id-928 ul#social-menu li {
+body.site-branding-theme ul#social-menu li {
     display: inline-block;
     margin-right: 1rem;
 }
 /* end social styles */
 
-body.page-id-928 .logotop {
+body.site-branding-theme .logotop {
     background: none;
     text-align: center;
     height: auto;
@@ -151,8 +151,8 @@ body.page-id-928 .logotop {
     z-index: 9;
 }
 
-body.page-id-928 .logotop .logo,
-body.page-id-928 footer .logo-img {
+body.site-branding-theme .logotop .logo,
+body.site-branding-theme footer .logo-img {
     color: #a8414d;
     width: 250px;
     height: auto;
@@ -161,143 +161,143 @@ body.page-id-928 footer .logo-img {
     display: block;
 }
 
-body.page-id-928,
-body.page-id-928 .section-content.centered p,
-body.page-id-928 a,
-body.page-id-928 input,
-body.page-id-928 textarea,
-body.page-id-928 button {
+body.site-branding-theme,
+body.site-branding-theme .section-content.centered p,
+body.site-branding-theme a,
+body.site-branding-theme input,
+body.site-branding-theme textarea,
+body.site-branding-theme button {
     font-family: "Ubuntu Mono", monospace !important;
     font-weight: 400;
     font-style: normal;
 }
 
-body.page-id-928 .section-content.centered h2 {
+body.site-branding-theme .section-content.centered h2 {
     font-family: "Cormorant Garamond", serif !important;
     text-transform: uppercase;
     font-size: 10rem !important;
     font-weight: 400;
 }
 
-body.page-id-928 .title-cont {
+body.site-branding-theme .title-cont {
     display: none;
 }
 
-body.page-id-928 .entry-content > div:nth-of-type(odd),
-body.page-id-928 .woocommerce-page #content,
-body.page-id-928 .archive #content,
-body.page-id-928 .header-wrapper,
-body.page-id-928 footer {
+body.site-branding-theme .entry-content > div:nth-of-type(odd),
+body.site-branding-theme .woocommerce-page #content,
+body.site-branding-theme .archive #content,
+body.site-branding-theme .header-wrapper,
+body.site-branding-theme footer {
     background: #fef9f3EE;
 }
 
-body.page-id-928 .entry-content > div:nth-of-type(even) {
+body.site-branding-theme .entry-content > div:nth-of-type(even) {
     background: #a8414dEE;
 }
 
-body.page-id-928 h1,
-body.page-id-928 h2,
-body.page-id-928 h3,
-body.page-id-928 h4,
-body.page-id-928 li,
-body.page-id-928 p,
-body.page-id-928 a,
-body.page-id-928 a.btn.cta,
-body.page-id-928 button,
-body.page-id-928 label,
-body.page-id-928 textarea,
-body.page-id-928 input,
-body.page-id-928 input[type="text"],
-body.page-id-928 input[type="email"],
-body.page-id-928 input[type="submit"],
-body.page-id-928 input::placeholder,
-body.page-id-928 .wpcf7-response-output {
+body.site-branding-theme h1,
+body.site-branding-theme h2,
+body.site-branding-theme h3,
+body.site-branding-theme h4,
+body.site-branding-theme li,
+body.site-branding-theme p,
+body.site-branding-theme a,
+body.site-branding-theme a.btn.cta,
+body.site-branding-theme button,
+body.site-branding-theme label,
+body.site-branding-theme textarea,
+body.site-branding-theme input,
+body.site-branding-theme input[type="text"],
+body.site-branding-theme input[type="email"],
+body.site-branding-theme input[type="submit"],
+body.site-branding-theme input::placeholder,
+body.site-branding-theme .wpcf7-response-output {
     color: #a8414d !important;
 }
 
-body.page-id-928 input[type="text"],
-body.page-id-928 input[type="email"],
-body.page-id-928 textarea {
+body.site-branding-theme input[type="text"],
+body.site-branding-theme input[type="email"],
+body.site-branding-theme textarea {
     background-color: #a8414dEE !important;
     color: #fef9f3 !important;
 }
 
-body.page-id-928 a.btn.cta,
-body.page-id-928 button,
-body.page-id-928 .woocommerce button,
-body.page-id-928 input {
+body.site-branding-theme a.btn.cta,
+body.site-branding-theme button,
+body.site-branding-theme .woocommerce button,
+body.site-branding-theme input {
     border-color: #a8414d !important;
     border-radius: 0 !important;
 }
 
-body.page-id-928 a.btn.cta:hover,
-body.page-id-928 button:hover,
-body.page-id-928 input:hover {
+body.site-branding-theme a.btn.cta:hover,
+body.site-branding-theme button:hover,
+body.site-branding-theme input:hover {
     color: #fef9f3 !important;
     background: #a8414d !important;
     border-color: #a8414d !important;
 }
 
-body.page-id-928 input::placeholder,
-body.page-id-928 .entry-content > div:nth-of-type(even) h2,
-body.page-id-928 .entry-content > div:nth-of-type(even) h3,
-body.page-id-928 .entry-content > div:nth-of-type(even) h4,
-body.page-id-928 .entry-content > div:nth-of-type(even) li,
-body.page-id-928 .entry-content > div:nth-of-type(even) p:not(.caption-text),
-body.page-id-928 .entry-content > div:nth-of-type(even) a,
-body.page-id-928 .entry-content > div:nth-of-type(even) a.btn.cta,
-body.page-id-928 .entry-content > div:nth-of-type(even) button,
-body.page-id-928 .entry-content > div:nth-of-type(even) label,
-body.page-id-928 .entry-content > div:nth-of-type(even) textarea,
-body.page-id-928 .entry-content > div:nth-of-type(even) input,
-body.page-id-928 .entry-content > div:nth-of-type(even) input,[type="text"],
-body.page-id-928 .entry-content > div:nth-of-type(even) input[type="email"],
-body.page-id-928 .entry-content > div:nth-of-type(even) input[type="submit"],
-body.page-id-928 .entry-content > div:nth-of-type(even) input::placeholder {
+body.site-branding-theme input::placeholder,
+body.site-branding-theme .entry-content > div:nth-of-type(even) h2,
+body.site-branding-theme .entry-content > div:nth-of-type(even) h3,
+body.site-branding-theme .entry-content > div:nth-of-type(even) h4,
+body.site-branding-theme .entry-content > div:nth-of-type(even) li,
+body.site-branding-theme .entry-content > div:nth-of-type(even) p:not(.caption-text),
+body.site-branding-theme .entry-content > div:nth-of-type(even) a,
+body.site-branding-theme .entry-content > div:nth-of-type(even) a.btn.cta,
+body.site-branding-theme .entry-content > div:nth-of-type(even) button,
+body.site-branding-theme .entry-content > div:nth-of-type(even) label,
+body.site-branding-theme .entry-content > div:nth-of-type(even) textarea,
+body.site-branding-theme .entry-content > div:nth-of-type(even) input,
+body.site-branding-theme .entry-content > div:nth-of-type(even) input,[type="text"],
+body.site-branding-theme .entry-content > div:nth-of-type(even) input[type="email"],
+body.site-branding-theme .entry-content > div:nth-of-type(even) input[type="submit"],
+body.site-branding-theme .entry-content > div:nth-of-type(even) input::placeholder {
     color: #fef9f3 !important;
 }
 
-body.page-id-928 .entry-content > div:nth-of-type(even) a.btn.cta,
-body.page-id-928 .entry-content > div:nth-of-type(even) button,
-body.page-id-928 .entry-content > div:nth-of-type(even) .woocommerce button,
-body.page-id-928 .entry-content > div:nth-of-type(even) input,
-body.page-id-928 .entry-content > div:nth-of-type(even) input::placeholder {
+body.site-branding-theme .entry-content > div:nth-of-type(even) a.btn.cta,
+body.site-branding-theme .entry-content > div:nth-of-type(even) button,
+body.site-branding-theme .entry-content > div:nth-of-type(even) .woocommerce button,
+body.site-branding-theme .entry-content > div:nth-of-type(even) input,
+body.site-branding-theme .entry-content > div:nth-of-type(even) input::placeholder {
     border-color: #fef9f3 !important;
 }
 
-body.page-id-928 .entry-content > div:nth-of-type(even) a.btn.cta:hover,
-body.page-id-928 .entry-content > div:nth-of-type(even) button:hover,
-body.page-id-928 .entry-content > div:nth-of-type(even) .woocommerce button:hover,
-body.page-id-928 .entry-content > div:nth-of-type(even) input:hover {
+body.site-branding-theme .entry-content > div:nth-of-type(even) a.btn.cta:hover,
+body.site-branding-theme .entry-content > div:nth-of-type(even) button:hover,
+body.site-branding-theme .entry-content > div:nth-of-type(even) .woocommerce button:hover,
+body.site-branding-theme .entry-content > div:nth-of-type(even) input:hover {
     color: #a8414d !important;
     background: #fef9f3;
     border-color: #fef9f3;
 }
 
-body.page-id-928 textarea {
+body.site-branding-theme textarea {
     border-radius: 0;
 }
 
-body.page-id-928 .smush-detected-img {
+body.site-branding-theme .smush-detected-img {
     border-radius: 0 !important;
 }
 
-body.page-id-928 .band-thumbnail:hover,
-body.page-id-928 .band-thumbnail-wrap img,
-body.page-id-928 .band-img.wp-post-image {
+body.site-branding-theme .band-thumbnail:hover,
+body.site-branding-theme .band-thumbnail-wrap img,
+body.site-branding-theme .band-img.wp-post-image {
     filter: sepia(.4);
 }
 
-body.page-id-928 .thumb-caption {
+body.site-branding-theme .thumb-caption {
     background: #fef9f3CC;
     transition: all 0.75s ease-in-out;
 }
 
-body.page-id-928 .thumb-caption p.caption-text {
+body.site-branding-theme .thumb-caption p.caption-text {
     color: #a8414d;
 }
 
-body.page-id-928 .logotop.home {
+body.site-branding-theme .logotop.home {
     display: block;
 }
 
@@ -319,34 +319,34 @@ body.page-id-928 .logotop.home {
         overflow: hidden;
     }
 
-    body.page-id-928 .hero-cont {
+    body.site-branding-theme .hero-cont {
         top: 175px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    body.page-id-928 .home .section-content.centered h2,
-    body.page-id-928#start .section-content.centered h2,
-    body.page-id-928 .woocommerce-page .section-content.centered h2,
-    body.page-id-928 .archive .section-content.centered h2 {
+    body.site-branding-theme .home .section-content.centered h2,
+    body.site-branding-theme .section-content.centered h2,
+    body.site-branding-theme .woocommerce-page .section-content.centered h2,
+    body.site-branding-theme .archive .section-content.centered h2 {
         padding-top: 175px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    body.page-id-928 header .menu-hauptmenu-container {
+    body.site-branding-theme header .menu-hauptmenu-container {
         display: block;
     }
 
-    body.page-id-928 .menu-toggle {
+    body.site-branding-theme .menu-toggle {
         display: none;
     }
 
-    body.page-id-928 #site-navigation {
+    body.site-branding-theme #site-navigation {
         height: auto;
     }
 
-    body.page-id-928 .secondary-menu {
+    body.site-branding-theme .secondary-menu {
         position: fixed;
         top: 20px;
         display: flex;
@@ -357,58 +357,58 @@ body.page-id-928 .logotop.home {
 }
 
 @media screen and (max-width: 767px) {
-    body.page-id-928 .menu-toggle #hamburger {
+    body.site-branding-theme .menu-toggle #hamburger {
         width: 3rem;
         height: 2rem;
     }
 
-    body.page-id-928 .menu-toggle.open .hamburger-line:first-of-type {
+    body.site-branding-theme .menu-toggle.open .hamburger-line:first-of-type {
         top: 1rem;
     }
 
-    body.page-id-928 .section-content.centered h2 {
+    body.site-branding-theme .section-content.centered h2 {
         font-size: 4rem !important;
         padding-top: 15rem !important;
     }
 
-    body.page-id-928 .band h3,
+    body.site-branding-theme .band h3,
     .news-text-container h3 {
         font-size: 2.4rem !important;
     }
 
-    body.page-id-928 .menu-toggle {
+    body.site-branding-theme .menu-toggle {
         display: block;
     }
 
-    body.page-id-928 .menu-hauptmenu-container {
+    body.site-branding-theme .menu-hauptmenu-container {
         display: none;
     }
 
-    body.page-id-928 .menu-hauptmenu-container.open {
+    body.site-branding-theme .menu-hauptmenu-container.open {
         display: block;
     }
 
-    body.page-id-928 .home #site-navigation,
-    body.page-id-928#start #site-navigation {
+    body.site-branding-theme .home #site-navigation,
+    body.site-branding-theme #site-navigation {
         z-index: 9;
         transition: background 0.6s ease-in-out;
         height: auto;
     }
 
-    body.page-id-928#start #site-navigation.open {
+    body.site-branding-theme #site-navigation.open {
         height: 100vh;
     }
 
-    body.page-id-928 #primary-menu .menu-item span {
+    body.site-branding-theme #primary-menu .menu-item span {
         line-height: initial;
     }
 
-    body.page-id-928 #site-navigation .section-content.centered {
+    body.site-branding-theme #site-navigation .section-content.centered {
         padding: 0 5%;
         height: auto;
     }
 
-    body.page-id-928 .secondary-menu {
+    body.site-branding-theme .secondary-menu {
         position: fixed;
         padding-right: 5%;
         bottom: 0;
@@ -424,66 +424,66 @@ body.page-id-928 .logotop.home {
         background: #fef9f3ee;
     }
 
-    body.page-id-928 .secondary-menu .menu-social-menu-container,
-    body.page-id-928 .secondary-menu .menu-woocommerce-container {
+    body.site-branding-theme .secondary-menu .menu-social-menu-container,
+    body.site-branding-theme .secondary-menu .menu-woocommerce-container {
         position: static;
         display: block;
         width: auto;
         margin: 0;
     }
 
-    body.page-id-928 .secondary-menu #woocommerce-menu {
+    body.site-branding-theme .secondary-menu #woocommerce-menu {
         position: static;
     }
 
-    body.page-id-928 .logotop.home {
+    body.site-branding-theme .logotop.home {
         display: inline;
         text-align: left;
     }
 
-    body.page-id-928 .logotop.home a {
+    body.site-branding-theme .logotop.home a {
         height: 100%;
         display: inline-block;
     }
 
-    body.page-id-928 #primary-menu {
+    body.site-branding-theme #primary-menu {
         flex-direction: column;
         align-items: start;
         height: 70vh;
     }
 
-    body.page-id-928 .menu-toggle #hamburger .hamburger-line {
+    body.site-branding-theme .menu-toggle #hamburger .hamburger-line {
         background-color: #a8414d;
     }
 
-    body.page-id-928 .logotop .logo {
+    body.site-branding-theme .logotop .logo {
         position: static;
         margin: 0;
         display: initial;
         padding: 1rem 2rem;
     }
 
-    body.page-id-928 footer .section-content.centered {
+    body.site-branding-theme footer .section-content.centered {
         padding-bottom: 5rem;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-    body.page-id-928 #primary-menu .menu-item span {
+    body.site-branding-theme #primary-menu .menu-item span {
         font-size: 100%;
         line-height: 2;
     }
 
-    body.page-id-928 .logotop .logo,
-    body.page-id-928 footer .logo-img {
+    body.site-branding-theme .logotop .logo,
+    body.site-branding-theme footer .logo-img {
         width: 200px;
     }
 
-    body.page-id-928 .section-content.centered h2 {
+    body.site-branding-theme .section-content.centered h2 {
         font-size: 7rem !important;
     }
-    body.page-id-928 .woocommerce div.product div.images.woocommerce-product-gallery,
-    body.page-id-928 .woocommerce div.product div.summary {
+    body.site-branding-theme .woocommerce div.product div.images.woocommerce-product-gallery,
+    body.site-branding-theme .woocommerce div.product div.summary {
         width: 100%;
     }
 }
