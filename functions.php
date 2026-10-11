@@ -87,12 +87,6 @@ if ( ! function_exists( 'julianablumenschein_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'julianablumenschein_setup' );
 
-function julianablumenschein_add_branding_body_class( $classes ) {
-  $classes[] = 'site-branding-theme';
-  return $classes;
-}
-add_filter( 'body_class', 'julianablumenschein_add_branding_body_class' );
-
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -131,13 +125,6 @@ add_action( 'widgets_init', 'julianablumenschein_widgets_init' );
  */
 function julianablumenschein_scripts() {
 	wp_enqueue_style( 'julianablumenschein-style', get_stylesheet_uri() );
-  $branding_style_path = get_template_directory() . '/site-branding.css';
-  wp_enqueue_style(
-    'julianablumenschein-site-branding',
-    get_template_directory_uri() . '/site-branding.css',
-    array( 'julianablumenschein-style' ),
-    file_exists( $branding_style_path ) ? filemtime( $branding_style_path ) : null
-  );
 
   if ( is_page( 'start-neu-928' ) ) {
     $start_neu_css_path = get_template_directory() . '/start-neu.css';

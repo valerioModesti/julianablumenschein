@@ -28,8 +28,12 @@
     // Determine site name, location, and logo content based on the current page
     $site_name = get_bloginfo( 'name', 'display' );
     $location = ( is_front_page() || is_page( 'start-neu-928' ) ) ? 'home' : 'nohome';
-    $logo_url = esc_url( get_template_directory_uri() . '/img/juliana_blumenschein_logo_red.svg' );
-    $logotop_content = "<img class='logo' src='" . $logo_url . "' alt='" . esc_attr( $site_name . ' logo' ) . "'>";
+    if ( is_page( 'start-neu-928' ) ) {
+        $logo_url = esc_url( get_template_directory_uri() . '/img/juliana_blumenschein_logo_red.svg' );
+        $logotop_content = "<img class='logo' src='" . $logo_url . "' alt='" . esc_attr( $site_name . ' logo' ) . "'>";
+    } else {
+        $logotop_content = "<h1 class='site-title site-title-home'>" . esc_html( $site_name ) . "</h1>";
+    }
     ?>
 
 <body <?php body_class(); ?> id="<?php echo esc_attr( $location === 'home' ? 'start' : 'no-start' ); ?>">
